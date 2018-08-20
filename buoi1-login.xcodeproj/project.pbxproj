@@ -54,14 +54,38 @@
 		C397E1B9212A6B86001A8480 /* buoi1-login */ = {
 			isa = PBXGroup;
 			children = (
+				C397E1CE212A6BAB001A8480 /* Models */,
+				C397E1CD212A6BA3001A8480 /* Controllers */,
+				C397E1CC212A6B94001A8480 /* Views */,
 				C397E1BA212A6B86001A8480 /* AppDelegate.swift */,
-				C397E1BC212A6B86001A8480 /* ViewController.swift */,
-				C397E1BE212A6B86001A8480 /* Main.storyboard */,
 				C397E1C1212A6B8D001A8480 /* Assets.xcassets */,
 				C397E1C3212A6B8D001A8480 /* LaunchScreen.storyboard */,
 				C397E1C6212A6B8D001A8480 /* Info.plist */,
 			);
 			path = "buoi1-login";
+			sourceTree = "<group>";
+		};
+		C397E1CC212A6B94001A8480 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C397E1BE212A6B86001A8480 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C397E1CD212A6BA3001A8480 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C397E1BC212A6B86001A8480 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C397E1CE212A6BAB001A8480 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,14 +304,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KK659LKM92;
 				INFOPLIST_FILE = "buoi1-login/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.buoi1-login";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,14 +325,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KK659LKM92;
 				INFOPLIST_FILE = "buoi1-login/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.buoi1-login";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
