@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+  
+    
 
     @IBAction func btnLoginTapped(_ sender: Any) {
         if(lblUsername.text?.uppercased() == "ADMIN" && lblPassword.text?.uppercased() == "123456")
@@ -39,11 +44,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+        removeBorderNavigation()
     }
     
+    //Remove border navigation controller
+    func removeBorderNavigation()
+    {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
 }
 
+//Hide keyboard when tap around text field
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -53,14 +65,5 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
-    }
-}
-extension UINavigationBar {
-    func shouldRemoveShadow(_ value: Bool) -> Void {
-        if value {
-            self.setValue(true, forKey: "hidesShadow")
-        } else {
-            self.setValue(false, forKey: "hidesShadow")
-        }
     }
 }
