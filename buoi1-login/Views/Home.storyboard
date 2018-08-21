@@ -1,7 +1,85 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gw2-Se-WVo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="tHM-FY-oAN">
+            <objects>
+                <viewController id="egR-dl-Ljp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YZ1-go-OHu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CIL-Ea-Mqw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu" image="menu_baritem" id="O47-3j-xcU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwG-uq-pwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="436"/>
+        </scene>
+        <!--Thi-->
+        <scene sceneID="orU-m9-0UH">
+            <objects>
+                <viewController id="6um-Ov-cED" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BfR-1p-uX1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0Uj-v1-lMh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Thi" image="exam_baritem" id="dge-kz-E4b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zlo-Z4-zUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="10"/>
+        </scene>
+        <!--Học-->
+        <scene sceneID="LOJ-Mo-Pjb">
+            <objects>
+                <viewController id="tBM-g4-ISz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oYR-cz-cum">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DrB-7D-JOU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Học" image="study_baritem" id="YgM-dN-5my"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XiS-Kj-97T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-655"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="b8x-lr-eIN">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeTabbarID" id="gw2-Se-WVo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="seF-JC-GZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tBM-g4-ISz" kind="relationship" relationship="viewControllers" id="4KE-J1-VG2"/>
+                        <segue destination="6um-Ov-cED" kind="relationship" relationship="viewControllers" id="ZSL-eD-dgp"/>
+                        <segue destination="egR-dl-Ljp" kind="relationship" relationship="viewControllers" id="CnV-Mf-V1z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVq-ei-oUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-466" y="-323"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exam_baritem" width="24" height="24"/>
+        <image name="menu_baritem" width="26" height="26"/>
+        <image name="study_baritem" width="26" height="26"/>
+    </resources>
 </document>

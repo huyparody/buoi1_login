@@ -10,16 +10,57 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func btnLoginTapped(_ sender: Any) {
+        if(lblUsername.text?.uppercased() == "ADMIN" && lblPassword.text?.uppercased() == "123456")
+        {
+            print("Login success")
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let sb1 = storyboard.instantiateViewController(withIdentifier: "HomeTabbarID")
+            self.present(sb1, animated: true, completion: nil)
+        }
+        else
+        {
+            print("Login failed")
+            let alertController = UIAlertController(title: "Error", message: "Login failed! Please try again!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    @IBOutlet weak var lblUsername: UITextField!
+    @IBOutlet weak var lblPassword: UITextField!
+    
+    
+    @IBAction func btnRegisterTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sb2 = storyboard.instantiateViewController(withIdentifier: "RegisterControllerID")
+        self.present(sb2, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        hideKeyboardWhenTappedAround()
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+extension UINavigationBar {
+    func shouldRemoveShadow(_ value: Bool) -> Void {
+        if value {
+            self.setValue(true, forKey: "hidesShadow")
+        } else {
+            self.setValue(false, forKey: "hidesShadow")
+        }
+    }
+}
